@@ -1,0 +1,16 @@
+.titlesWrapper,
+.transactionData {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.transactionData {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.titles {
+  outline: 2px solid red;
+}
