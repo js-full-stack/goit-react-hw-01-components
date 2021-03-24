@@ -4,6 +4,7 @@ import styles from './FriendList.module.css';
 const FriendListItem = ({ friends }) => (
   <>
     {friends.map(({ id, isOnline, avatar, name }) => {
+      // console.log(friends);
       return (
         <li
           className={styles.friendItem}
@@ -28,17 +29,25 @@ const FriendListItem = ({ friends }) => (
 );
 
 FriendListItem.defaultProps = {
-  src: defaultImg,
+  avatar: defaultImg,
 };
 
 FriendListItem.propTypes = {
-  friends: propTypes.array,
-  friend: propTypes.shape({
-    id: propTypes.string,
-    isOnline: propTypes.bool,
-    avatar: propTypes.string,
-    name: propTypes.string,
-  }),
+  friends: propTypes.arrayOf(
+    propTypes.shape({
+      avatar: propTypes.string,
+      id: propTypes.number.isRequired,
+      name: propTypes.string.isRequired,
+      isOnline: propTypes.bool.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default FriendListItem;
+
+// friend: propTypes.shape({
+//   avatar: propTypes.string,
+//   id: propTypes.string.isRequired,
+//   isOnline: propTypes.bool.isRequired,
+//   name: propTypes.string.isRequired,
+// }),

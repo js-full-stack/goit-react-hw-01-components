@@ -3,6 +3,8 @@ import styles from './Statistics.module.css';
 import getRandomColor from './randomaizer';
 
 const Statistics = ({ stats, title }) => {
+  // console.log(stats);
+  // console.log(title);
   return (
     <section className={styles.statistics}>
       {title !== null ? <h2 className={styles.title}>{title}</h2> : null}
@@ -29,7 +31,7 @@ Statistics.defaultProps = {
 
 Statistics.propTypes = {
   title: propTypes.string,
-  stats: propTypes.array.isRequired,
+  stats: propTypes.arrayOf(Object),
 };
 
 export default Statistics;
