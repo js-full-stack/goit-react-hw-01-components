@@ -1,9 +1,9 @@
-import propTypes from 'prop-types';
 import styles from './Statistics.module.css';
 import getRandomColor from './randomaizer';
+import propTypes from 'prop-types';
 
 const Statistics = ({ stats, title }) => {
-  // console.log(stats);
+  console.log(stats);
   // console.log(title);
   return (
     <section className={styles.statistics}>
@@ -31,7 +31,13 @@ Statistics.defaultProps = {
 
 Statistics.propTypes = {
   title: propTypes.string,
-  stats: propTypes.arrayOf(Object),
+  stats: propTypes.arrayOf(
+    propTypes.shape({
+      id: propTypes.string.isRequired,
+      label: propTypes.string.isRequired,
+      percentage: propTypes.number.isRequired,
+    }),
+  ),
 };
 
 export default Statistics;
