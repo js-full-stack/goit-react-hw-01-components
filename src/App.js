@@ -23,8 +23,8 @@ const App = () => (
     />
 
     {/* tack-2 */}
-    <Statistics title="Upload stats" stats={stats} />
-    {/* <Statistics stats={stats} /> */}
+    {/* <Statistics title="Upload stats" stats={stats} /> */}
+    <Statistics stats={stats} />
 
     {/* tack-3*/}
     <FriendList friends={friends} />

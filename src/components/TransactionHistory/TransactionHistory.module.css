@@ -20,13 +20,21 @@
 }
 
 .titles {
-  background-color: black;
-}
-
-.transactionData:nth-child(even) {
-  background-color: #1e373f;
+  background-color: #102229;
 }
 
 .transactionData:nth-child(odd) {
+  background-color: #1e373f;
+}
+
+.transactionData:nth-child(even) {
   background-color: #061e29;
+}
+
+.transactionData:hover {
+  background: #bdbdbd;
+}
+
+.transactionData:hover > .item {
+  color: black;
 }

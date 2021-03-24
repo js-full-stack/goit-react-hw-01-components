@@ -8,17 +8,13 @@ const FriendListItem = ({ friends }) => (
       return (
         <li
           className={styles.friendItem}
-          styles={
-            isOnline
-              ? { backgroundColor: '#111111' }
-              : { backgroundColor: 'blue' }
-          }
+          style={isOnline ? { opacity: 1 } : { opacity: 0.5 }}
           key={id}
         >
           {isOnline ? (
-            <span className={styles.online}>status</span>
+            <span className={styles.online}></span>
           ) : (
-            <span className={styles.offline}>status</span>
+            <span className={styles.offline}></span>
           )}
           <img className={styles.avatar} src={avatar} alt={name} width="48" />
           <p className={styles.friendName}>{name}</p>

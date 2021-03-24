@@ -3,8 +3,6 @@ import getRandomColor from './randomaizer';
 import propTypes from 'prop-types';
 
 const Statistics = ({ stats, title }) => {
-  console.log(stats);
-  // console.log(title);
   return (
     <section className={styles.statistics}>
       {title !== null ? <h2 className={styles.title}>{title}</h2> : null}
@@ -36,8 +34,8 @@ Statistics.propTypes = {
       id: propTypes.string.isRequired,
       label: propTypes.string.isRequired,
       percentage: propTypes.number.isRequired,
-    }),
-  ),
+    }).isRequired,
+  ).isRequired,
 };
 
 export default Statistics;

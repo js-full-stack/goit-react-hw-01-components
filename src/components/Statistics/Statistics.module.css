@@ -27,6 +27,7 @@
   padding-top: 10px;
   padding-bottom: 15px;
   color: black;
+  transition: 1s;
 }
 
 .label {
