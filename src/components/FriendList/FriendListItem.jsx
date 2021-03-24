@@ -32,11 +32,13 @@ FriendListItem.defaultProps = {
 };
 
 FriendListItem.propTypes = {
-  src: propTypes.string,
-  name: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
-  location: propTypes.string.isRequired,
-  stats: propTypes.object.isRequired,
+  friends: propTypes.array,
+  friend: propTypes.shape({
+    id: propTypes.string,
+    isOnline: propTypes.bool,
+    avatar: propTypes.string,
+    name: propTypes.string,
+  }),
 };
 
 export default FriendListItem;
