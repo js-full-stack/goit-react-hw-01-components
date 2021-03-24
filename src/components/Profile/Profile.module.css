@@ -28,12 +28,14 @@
 .userName {
   font-size: 24px;
   font-weight: 700;
+  color: #e7b966;
 }
 
 .stats {
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
+  color: #b3aa6e;
 }
 
 .stats__item:not(:last-child) {
@@ -51,4 +53,5 @@
 .tag,
 .location {
   font-size: 18px;
+  color: #e7b966;
 }

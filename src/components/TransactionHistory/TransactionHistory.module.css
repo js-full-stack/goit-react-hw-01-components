@@ -1,16 +1,32 @@
-.titlesWrapper,
-.transactionData {
-  display: flex;
-  justify-content: space-between;
-  width: 600px;
+.transactionHistory {
+  border-collapse: collapse;
+  outline: 1px solid gray;
 }
 
-.transactionData {
-  display: flex;
-  justify-content: space-between;
-  width: 600px;
+.item {
+  width: 440px;
+  height: 60px;
+  font-size: 30px;
+  color: gainsboro;
+}
+
+.type {
+  background-color: #red;
+}
+
+.transactionData,
+.titles {
+  text-align: center;
 }
 
 .titles {
-  outline: 2px solid red;
+  background-color: black;
+}
+
+.transactionData:nth-child(even) {
+  background-color: #1e373f;
+}
+
+.transactionData:nth-child(odd) {
+  background-color: #061e29;
 }
