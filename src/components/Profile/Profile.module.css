@@ -1,7 +1,7 @@
 .profile {
   display: inline-block;
   text-align: center;
-  min-width: 500px;
+  min-width: 550px;
   margin-bottom: 50px;
   padding-bottom: 15px;
   background-image: linear-gradient(#020317, #000000);
@@ -15,16 +15,13 @@
 }
 
 .avatar {
-  width: 250px;
-  height: 250px;
+  width: 275px;
+  height: 275px;
   margin-bottom: 12px;
   margin-top: 25px;
   border-radius: 50%;
 }
 
-/* .avatar:hover {
-  box-shadow: 0 0 0 2px #d2973d inset, 0 0 0 4px white inset;
-} */
 .userName {
   font-size: 24px;
   font-weight: 700;

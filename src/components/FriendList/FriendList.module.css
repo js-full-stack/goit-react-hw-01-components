@@ -9,16 +9,13 @@
   position: relative;
   justify-content: space-around;
   align-items: center;
-  flex-basis: calc(25% - 24px);
+  flex-basis: calc(25% - 25px);
   height: 250px;
   /* margin-right: 20px; */
   border: 2px solid white;
   background: linear-gradient(to top, black, #2b7171);
   transition: 500ms;
-}
-
-.friendItem:not(:nth-child(4n)) {
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 .friendItem:hover {
@@ -27,8 +24,17 @@
     1px 1px 5px rgba(255, 255, 255, 1);
 }
 
+.friendItem .online .friendItem:hover {
+  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5),
+    1px 1px 5px rgba(255, 255, 255, 1);
+}
+
 .friendItem:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.online .friendItem:hover {
+  transform: scale(1.1);
 }
 
 .avatar {
@@ -36,6 +42,7 @@
   height: 150px;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 35px;
   background: none;
 }
 
@@ -47,12 +54,11 @@
 
 .styles {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  bottom: 10px;
-  right: 10px;
+  width: 15px;
+  height: 15px;
+  bottom: 23px;
+  right: 52px;
   border-radius: 50%;
-  background-color: red;
 }
 
 .online {

@@ -3,24 +3,21 @@ import propTypes from 'prop-types';
 import styles from './FriendList.module.css';
 const FriendListItem = ({ friends }) => (
   <>
-    {friends.map(({ id, isOnline, avatar, name }) => {
-      // console.log(friends);
-      return (
-        <li
-          className={styles.friendItem}
-          style={isOnline ? { opacity: 1 } : { opacity: 0.5 }}
-          key={id}
-        >
-          {isOnline ? (
-            <span className={styles.online}></span>
-          ) : (
-            <span className={styles.offline}></span>
-          )}
-          <img className={styles.avatar} src={avatar} alt={name} width="48" />
-          <p className={styles.friendName}>{name}</p>
-        </li>
-      );
-    })}
+    {friends.map(({ id, isOnline, avatar, name }) => (
+      <li
+        className={styles.friendItem}
+        style={isOnline ? { opacity: 1 } : { opacity: 0.5 }}
+        key={id}
+      >
+        {isOnline ? (
+          <span className={styles.online}></span>
+        ) : (
+          <span className={styles.offline}></span>
+        )}
+        <img className={styles.avatar} src={avatar} alt={name} width="48" />
+        <p className={styles.friendName}>{name}</p>
+      </li>
+    ))}
   </>
 );
 
